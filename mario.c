@@ -15,14 +15,14 @@ do
 
  int row;
 {
- for(row=0;row<height;row++)
+ for(row=1;row<height;row++)
  {
    for(int space=height-1;space>row;space--)
       {
        //space
        printf(" ");
       }
-    for(int hashes=0;hashes<=row+1;hashes++)
+    for(int hashes=1;hashes<=row+1;hashes++)
       {
        //hashes
          printf("#");
