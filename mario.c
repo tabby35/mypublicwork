@@ -15,7 +15,7 @@ do
 
  int row;
 {
- for(row=1;row<height;row++)
+ for(row=0;row<height;row++)
  {
    for(int space=height-1;space>row;space--)
       {
