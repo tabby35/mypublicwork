@@ -10,7 +10,7 @@ do
  //printf();
  height=get_int("give me the height:\n");
  }
- while(height<0 || height>8);
+ while(height<1 || height>8);
 
 
  int row;
