@@ -8,20 +8,20 @@ int main(void)
  {
   //get height from user
   //printf();
-  height=get_int("give me the height:\n");
+  height = get_int("give me the height:\n");
  }
- while(height<1 || height>8);
+ while (height < 1 || height > 8);
 
  int row;
  {
-  for(row=0;row<height;row++)
+  for (row = 0; row < height; row++)
   {
-   for(int space=height-1;space>row;space--)
+   for (int space = height-1; space > row; space--)
     {
      //space
      printf(" ");
     }
-   for(int hashes=1;hashes<=row+1;hashes++)
+   for (int hashes = 1; hashes <= row + 1; hashes++)
     {
      //hashes
      printf("#");
