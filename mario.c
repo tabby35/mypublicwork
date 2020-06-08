@@ -7,10 +7,10 @@ int height;
 do
  {
   //get height from user
- printf("give me the height:\n");
- height=get_int();
+ //printf();
+ height=get_int("give me the height:\n");
  }
- while(height<0 || height>23);
+ while(height<0 || height>8);
 
 
  int row;
