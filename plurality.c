@@ -67,12 +67,12 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    for (int i=0;i<candidate_count;i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(candidates[i].name,name)==0)
+        if (strcmp(candidates[i].name,name) == 0)
         {
         //update candidates votes
-            candidates[i].votes +=1;
+            candidates[i].votes += 1;
             return true;
         }
     }
@@ -85,21 +85,21 @@ void print_winner(void)
     // TODO
 int high_votes = 0;
 //1. find the maximum number of votes
-    for (int i=0;i<candidate_count;i++)
+    for(int i = 0; i < candidate_count; i++)
     {
         //printf("%s :%i\n",candidates[i].name,candidates[i].votes);
-        if (high_votes<candidates[i].votes )
+        if (high_votes < candidates[i].votes )
         {
-            high_votes=candidates[i].votes;
+            high_votes = candidates[i].votes;
         }
 
     }
     //int winner=high_votes;// GOOD
 
     //2. compare if the candidates have the max number of votes, and print its name if so
-    for(int i=0;i<candidate_count;i++) //GOOD
+    for(int i = 0; i < candidate_count; i++) //GOOD
     {
-        if(high_votes==candidates[i].votes) //GOOD
+        if(high_votes == candidates[i].votes) //GOOD
         printf("%s\n",candidates[i].name); //this looks good
     }
 
