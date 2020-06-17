@@ -100,7 +100,7 @@ int high_votes = 0;
     for(int i=0;i<candidate_count;i++) //GOOD
     {
         if(high_votes==candidates[i].votes) //GOOD
-        printf("%s",candidates[i].name); //this looks good
+        printf("%s\n",candidates[i].name); //this looks good
     }
 
 }
