@@ -130,22 +130,18 @@ bool vote(int voter, int rank, string name)
 {
     // TODO
     //look for candidate name
-    for(int j = 0; j < candidate_count; j++)
+    for(voter=0;voter<voter_count;voter++)
     {
-        if(strcmp(name,candidates[j].name)==0)
+    for(rank=0;rank<candidate_count;rank++)
+    {
+        if(strcmp(name,candidates[rank].name)==0)
             //update prefence
         {
-            for(voter=0;voter<voter_count;voter++)
-            {
-            for(rank=0;rank<candidate_count;rank++)
-            {
-                preferences[voter][rank]=j;
+            preferences[voter][rank]=rank;
                 //printf(" 1st rank:%i\n",preferences[voter][rank]);
                 return true;
-            }
-            }
         }
-
+    }
     }
     return false;
 }
