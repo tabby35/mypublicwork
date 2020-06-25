@@ -157,18 +157,17 @@ void tabulate(void)
     {
         for(int j=0;j<candidate_count;j++)
         {
-           // for(int k=0;k<candidate_count;k++)
-            //{
-                if(candidates[j].eliminated==true)
-                    {
-                      //move to the net prefered candidate
-                    preferences[i][j]=preferences[i][j+1];
+            int candidateindex=preferences[i][j];
+            if(candidates[candidateindex].eliminated==true)
+                {
+                    //move to the net prefered candidate
+                    candidateindex=preferences[i][j+1];
                     continue;
                     }
-                if(preferences[i][j]==j && candidates[j].eliminated==false)
+            if(candidates[candidateindex].eliminated==false)
                 {
-                    printf("%s:%i\n",candidates[j].name,candidates[j].votes);
-                    candidates[j].votes+=1;
+                    printf("%s:%i\n",candidates[candidateindex].name,candidates[candidateindex].votes);
+                    candidates[candidateindex].votes+=1;
                    // break;
 
                 }
