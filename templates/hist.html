@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+    {% block title %}
+        Hist
+    {% endblock %}
+
+    {% block main %}
+        <table class="table">
+            <thead><tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Shares bought</th>
+                <th scope="col">Price bought</th>
+                <th scope="col">Date purchased</th>
+                <th scope="col">Shares sold</th>
+                <th scope="col">Amount acquired</th>
+                <th scope="col">Date_sold</th>
+            </tr></thead>
+            <tbody>
+                {% for stock in row %}
+                <tr>
+                    <td>{{stock.Symbol}}</td>
+                    <td>{{stock.Number_of_shares}}</td>
+                    <td>{{stock.price}}</td>
+                    <td>{{stock.Date_time}}</td>
+                    <td>{{stock.sharestosell}}</td>
+                    <td>{{stock.Total_sell}}</td>
+                    <td>{{stock.datesold}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endblock %}
