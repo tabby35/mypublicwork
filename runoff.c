@@ -124,24 +124,21 @@ int main(int argc, string argv[])
     }
     return 0;
 }
-
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
     // TODO
     //look for candidate name
-    for(voter=0;voter<voter_count;voter++)
+    for(int  j= 0; j < candidate_count; j++)
     {
-    for(rank=0;rank<candidate_count;rank++)
-    {
-        if(strcmp(name,candidates[rank].name)==0)
+        if(strcmp(name,candidates[j].name)==0)
             //update prefence
         {
-            preferences[voter][rank]=rank;
-                //printf(" 1st rank:%i\n",preferences[voter][rank]);
-                return true;
+            preferences[voter][rank]=j;
+            //printf(" 1st rank:%i\n",preferences[voter][rank]);
+            return true;
         }
-    }
+
     }
     return false;
 }
@@ -214,16 +211,12 @@ bool is_tie(int min)
     for(int i=0;i<candidate_count;i++)
     {
         // TODO
-        if(min < candidates[i].votes)
+        if(candidates[i].eliminated== true)
         {
-            return false;
-        }
-        else if(candidates[i].eliminated== false && candidates[i].votes==min)
-        {
-          return true;
+          return false;
         }
     }
-    return false;
+    return true;
 }
 
 // Eliminate the candidate (or candidiates) in last place
